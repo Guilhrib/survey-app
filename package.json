@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Guilhrib/survey-app/issues"
   },
-  "homepage": "https://github.com/Guilhrib/survey-app#readme"
+  "homepage": "https://github.com/Guilhrib/survey-app#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.5.0"
+  }
 }
