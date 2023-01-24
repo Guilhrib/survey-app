@@ -2,7 +2,7 @@ export interface HttpRequest {
   body?: any
 }
 
-export interface HttpPesponse {
+export interface HttpResponse {
   statusCode: number
   body: any
 }
