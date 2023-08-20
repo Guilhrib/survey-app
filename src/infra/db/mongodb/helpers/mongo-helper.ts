@@ -12,6 +12,6 @@ export const MongoHelper = {
   },
 
   getCollection (name: string): Collection {
-    return this.client.db().collection(name)
+    return this.client.db('survey-app').collection(name)
   }
 }
