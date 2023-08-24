@@ -6,10 +6,10 @@ export class RequiredFieldValidation implements Validation {
     private readonly fieldName: string
   ) {}
 
-  validate (input: any): Error {
+  validate (input: any): Error | null {
     if (!input[this.fieldName]) {
       return new MissingParamError(this.fieldName)
     }
-    return null as any
+    return null
   }
 }
