@@ -1,0 +1,21 @@
+version: "3"
+services:
+  mongo:
+    container_name: mongo-container-survey-app
+    image: mongo:6
+    restart: always
+    volumes:
+      - ./data:/data/db
+    ports:
+      - 27017:27017
+  api:
+    container_name: api-container-survey-app
+    build: .
+    image: survey-app
+    command: npm start
+    volumes:
+      - ./dist:/usr/src/app/dist
+    ports:
+      - 5050:5050
+    depends_on:
+      - mongo
