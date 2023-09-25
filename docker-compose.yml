@@ -12,10 +12,12 @@ services:
     container_name: api-container-survey-app
     build: .
     image: survey-app
-    command: npm start
+    command: npm run debug
     volumes:
       - ./dist:/usr/src/app/dist
+      - ./pachage.json:/usr/src/app/package.json
     ports:
       - 5050:5050
+      - 9222:9222
     depends_on:
       - mongo
